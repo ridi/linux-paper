@@ -1,0 +1,4 @@
+config TOUCHSCREEN_GT9157
+	tristate "Goodix GT9157 Touchscreen Driver"
+	help
+	  Core driver for Goodix GT9157
