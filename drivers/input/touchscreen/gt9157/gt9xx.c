@@ -1499,8 +1499,9 @@ static s32 gtp_init_panel(struct goodix_ts_data *ts)
             GTP_DEBUG("CFG_GROUP%d Config Version: %d, 0x%02X; IC Config Version: %d, 0x%02X", sensor_id+1, 
                         send_cfg_buf[sensor_id][0], send_cfg_buf[sensor_id][0], opr_buf[0], opr_buf[0]);
             
-            if (opr_buf[0] < 90)    
+            if (opr_buf[0] < 91)    
             {
+				printk(KERN_ERR "[slr] do sending TP config\n");
                 grp_cfg_version = send_cfg_buf[sensor_id][0];       // backup group config version
                 send_cfg_buf[sensor_id][0] = 0x00;
                 ts->fixed_cfg = 0;
