@@ -1,0 +1,2 @@
+config TOUCHSCREEN_CATA_MSG2238
+	tristate "Mstar msg2238 Touchscreen Driver"
