@@ -81,3 +81,5 @@ GTAGS
 *.orig
 *~
 \#*#
+!.scmversion
+!vmlinux.scr
