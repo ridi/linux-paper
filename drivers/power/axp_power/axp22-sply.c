@@ -40,14 +40,14 @@
 #include <linux/gpio.h>
 #include <mach/board.h>
 
-#define DBG_AXP_PSY 0
+#define DBG_AXP_PSY 1
 #if  DBG_AXP_PSY
 #define DBG_PSY_MSG(format,args...)   printk(KERN_INFO "[AXP22]"format,##args)
 #else
 #define DBG_PSY_MSG(format,args...)   do {} while (0)
 #endif
 
-static int axp_debug = 0;
+static int axp_debug = 1;
 static uint8_t axp_reg_addr = 0;
 struct axp_adc_res adc;
 struct delayed_work usbwork;
